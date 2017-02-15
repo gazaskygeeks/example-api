@@ -15,3 +15,8 @@ var config = {
 ```
 
 To get the KEY singup to https://newsapi.org/.
+
+## Tests
+
+In order to run the tests open `tests/test.html`. Remember you need to create a
+`config.js` file at the root level (see Run section).

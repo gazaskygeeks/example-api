@@ -43,9 +43,9 @@ var utils = {
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         var json = JSON.parse(xhr.responseText);
-        cb(null, json);
-      } else {
-        // TODO: handle else branch
+        cb(undefined, json);
+      } else if (xhr.readyState === 4 && xhr.status !== 200) {
+        cb(xhr.responseText,undefined);
       }
     };
     xhr.open(configObj.method, configObj.url, true);
